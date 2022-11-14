@@ -9,15 +9,14 @@
 [![Latest Release](https://img.shields.io/github/v/release/ronniedroid/OpenCalcT9.svg?logo=github&style=for-the-badge)](https://github.com/ronniedroid/OpenCalcT9/releases/latest)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 
-#[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+<!-- [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" -->
+<!-- alt='Get it on Google Play' -->
+<!-- height="100">](https://play.google.com/store/apps/details?id=com.darkempire78.opencalculator) -->
 
-# alt='Get it on Google Play'
+<!-- [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" -->
+<!-- alt="Get it on F-Droid" -->
+<!-- height="100">](https://f-droid.org/en/packages/com.darkempire78.opencalculator) -->
 
-# height="100">](https://play.google.com/store/apps/details?id=com.darkempire78.opencalculator)
-
-#[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-#alt="Get it on F-Droid"
-#height="100">](https://f-droid.org/en/packages/com.darkempire78.opencalculator)
 [<img src="https://raw.githubusercontent.com/deckerst/common/main/assets/get-it-on-github.png"
       alt='Get it on GitHub'
       height="100">](https://github.com/ronniedroid/OpenCalcT9/releases/latest)
