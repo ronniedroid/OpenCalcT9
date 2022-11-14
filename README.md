@@ -2,7 +2,7 @@
 
 <img width="200" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" alt="OpenCalcT9" align="center">
 
-# OpenCalc
+# OpenCalcT9
 
 ### A simple and beautiful calculator for Android devices with a physical keyboard, forked from [OpenCalc](https://github.com/Darkempire78/OpenCalc).
 
