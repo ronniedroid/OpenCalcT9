@@ -1,0 +1,5 @@
+New:
+
+- Added support for physical buttons
+- Removed unneeded soft buttons (0-9)
+- Update results support for physical buttons
