@@ -1,4 +1,4 @@
-package com.darkempire78.opencalculator
+package com.ronniedroid.opencalculatort9
 
 import android.content.ClipData
 import android.content.ClipboardManager

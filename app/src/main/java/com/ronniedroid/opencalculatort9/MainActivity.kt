@@ -1,4 +1,4 @@
-package com.darkempire78.opencalculator
+package com.ronniedroid.opencalculatort9
 
 import android.animation.LayoutTransition
 import android.annotation.SuppressLint
@@ -15,9 +15,10 @@ import android.widget.HorizontalScrollView
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.darkempire78.opencalculator.databinding.ActivityMainBinding
+import com.ronniedroid.opencalculatort9.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
 
         // Disable the keyboard on display EditText
         binding.input.showSoftInputOnFocus = false
+
+        binding.input.doAfterTextChanged { updateResultDisplay() }
 
         // https://www.geeksforgeeks.org/how-to-detect-long-press-in-android/
         binding.backspaceButton.setOnLongClickListener {
@@ -349,46 +352,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         return cleanCalculation
-    }
-
-    fun zeroButton(view: View) {
-        updateDisplay(view, "0")
-    }
-
-    fun oneButton(view: View) {
-        updateDisplay(view, "1")
-    }
-
-    fun twoButton(view: View) {
-        updateDisplay(view, "2")
-    }
-
-    fun threeButton(view: View) {
-        updateDisplay(view, "3")
-    }
-
-    fun fourButton(view: View) {
-        updateDisplay(view, "4")
-    }
-
-    fun fiveButton(view: View) {
-        updateDisplay(view, "5")
-    }
-
-    fun sixButton(view: View) {
-        updateDisplay(view, "6")
-    }
-
-    fun sevenButton(view: View) {
-        updateDisplay(view, "7")
-    }
-
-    fun eightButton(view: View) {
-        updateDisplay(view, "8")
-    }
-
-    fun nineButton(view: View) {
-        updateDisplay(view, "9")
     }
 
     fun addButton(view: View) {

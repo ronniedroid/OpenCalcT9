@@ -5,7 +5,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.darkempire78.opencalculator"
+        applicationId "com.ronniedroid.opencalculatort9"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 19

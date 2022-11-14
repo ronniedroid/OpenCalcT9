@@ -1,4 +1,4 @@
-package com.darkempire78.opencalculator
+package com.ronniedroid.opencalculatort9
 
 import android.content.Context
 import androidx.preference.PreferenceManager
@@ -8,9 +8,9 @@ class MyPreferences(context: Context) {
 
     // https://proandroiddev.com/dark-mode-on-android-app-with-kotlin-dc759fc5f0e1
     companion object {
-        private const val DARK_STATUS = "darkempire78.opencalculator.DARK_STATUS"
-        private const val KEY_VIBRATION_STATUS = "darkempire78.opencalculator.KEY_VIBRATION_STATUS"
-        private const val KEY_HISTORY = "darkempire78.opencalculator.HISTORY"
+        private const val DARK_STATUS = "ronniedroid.opencalculatort9.DARK_STATUS"
+        private const val KEY_VIBRATION_STATUS = "ronniedroid.opencalculatort9.KEY_VIBRATION_STATUS"
+        private const val KEY_HISTORY = "ronniedroid.opencalculatort9.HISTORY"
     }
 
     private val preferences = PreferenceManager.getDefaultSharedPreferences(context)

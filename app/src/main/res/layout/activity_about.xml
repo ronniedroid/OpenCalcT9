@@ -4,31 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity"
-    android:background="?attr/background_color">
+    android:background="?attr/background_color"
+    tools:context=".AboutActivity">
 
     <ImageView
         android:id="@+id/about_back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="18dp"
         android:layout_margin="10dp"
-        android:backgroundTint="?attr/text_color"
         android:background="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="?attr/text_color"
+        android:padding="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="161dp"
         android:src="@drawable/rounded_icon"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ContentDescription" />
+
 
     <TextView
         android:id="@+id/about_app_name"
@@ -37,12 +40,11 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/app_name"
-        android:textSize="38sp"
         android:textColor="?attr/text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        tools:ignore="MissingConstraints" />
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="192dp" />
 
     <TextView
         android:id="@+id/about_app_version"
@@ -51,49 +53,24 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="v0.0.0"
-        android:textSize="20sp"
         android:textColor="?attr/text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_app_name"
-        tools:ignore="MissingConstraints" />
+        android:textSize="14sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="192dp" />
 
     <ImageView
         android:id="@+id/about_github_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="20dp"
+        android:layout_width="71dp"
+        android:layout_height="72dp"
         android:background="@drawable/github_circle_button"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toEndOf="@+id/about_discord_button"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_app_name"
+        app:layout_constraintVertical_bias="0.5"
         tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/about_discord_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/discord_circle_button"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/about_github_button"
-        app:layout_constraintStart_toEndOf="@+id/about_tip_button"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/about_tip_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/tip_circle_button"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/about_discord_button"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        tools:ignore="ContentDescription" />
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
