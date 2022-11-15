@@ -76,7 +76,7 @@ class AboutActivity : AppCompatActivity() {
         binding.aboutGithubButton.setOnClickListener {
             val browserIntent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://github.com/Darkempire78/OpenCalc")
+                Uri.parse("https://github.com/ronniedroid/OpenCalcT9")
             )
             startActivity(browserIntent)
         }

@@ -5,9 +5,7 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.HapticFeedbackConstants
 import android.view.MenuItem
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
@@ -135,13 +133,7 @@ class MainActivity : AppCompatActivity() {
         val popup = PopupMenu(this, view)
         val inflater = popup.menuInflater
         inflater.inflate(R.menu.app_menu, popup.menu)
-        popup.menu.findItem(R.id.app_menu_vibration_button).isChecked =
-            MyPreferences(this).vibrationMode
         popup.show()
-    }
-
-    fun checkVibration(menuItem: MenuItem) {
-        MyPreferences(this).vibrationMode = !menuItem.isChecked
     }
 
     fun openAbout(menuItem: MenuItem) {
@@ -154,14 +146,6 @@ class MainActivity : AppCompatActivity() {
         MyPreferences(this@MainActivity).saveHistory(this@MainActivity, mutableListOf())
         // Clear drawer
         historyAdapter.clearHistory()
-    }
-
-    private fun keyVibration(view: View) {
-        if (MyPreferences(this).vibrationMode) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-                view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS)
-            }
-        }
     }
 
     private fun updateDisplay(view: View, value: String) {
@@ -185,8 +169,6 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.Default) {
             withContext(Dispatchers.Main) {
-                // Vibrate when key pressed
-                keyVibration(view)
             }
 
             val formerValue = binding.input.text.toString()
@@ -445,8 +427,6 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun degreeButton(view: View) {
-        keyVibration(view)
-
         if (binding.degreeButton.text.toString() == "DEG") {
             binding.degreeButton.text = "RAD"
             mXparser.setRadiansMode()
@@ -460,8 +440,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun invButton(view: View) {
-        keyVibration(view)
-
         if (!isInvButtonClicked) {
             isInvButtonClicked = true
 
@@ -486,7 +464,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clearButton(view: View) {
-        keyVibration(view)
 
         binding.input.setText("")
 
@@ -496,7 +473,6 @@ class MainActivity : AppCompatActivity() {
 
     fun equalsButton(view: View) {
         lifecycleScope.launch(Dispatchers.Default) {
-            keyVibration(view)
 
             val calculation = binding.input.text.toString()
 
@@ -603,7 +579,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun backspaceButton(view: View) {
-        keyVibration(view)
 
         val cursorPosition = binding.input.selectionStart
         val textLength = binding.input.text.length

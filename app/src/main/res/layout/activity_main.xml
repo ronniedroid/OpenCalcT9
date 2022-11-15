@@ -83,7 +83,8 @@
                 android:layout_height="0dp"
                 android:paddingHorizontal="8dp"
                 android:paddingTop="12dp"
-                android:paddingBottom="0dp"
+                android:paddingBottom="3dp"
+                android:stretchColumns="*"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -345,22 +346,6 @@
                     android:layout_weight="3">
 
                     <Button
-                        android:id="@+id/clearButton"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="5dp"
-                        android:layout_marginVertical="7dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="?attr/button_clear_color"
-                        android:fontFamily="@style/RobotoFontCondensedLight"
-                        android:onClick="clearButton"
-                        android:text="@string/clear"
-                        android:textColor="?attr/text_color"
-                        android:textSize="20sp" />
-
-                    <Button
                         android:id="@+id/parenthesesButton"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="0dp"
@@ -423,15 +408,16 @@
                         android:text="@string/substract"
                         android:textColor="?attr/text_color"
                         android:textSize="20sp" />
+
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3">
 
                     <Button
-                        android:id="@+id/pointButton"
+                        android:id="@+id/clearButton"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -439,25 +425,10 @@
                         android:layout_marginVertical="7dp"
                         android:layout_weight="1"
                         android:background="@drawable/circle"
+                        android:backgroundTint="?attr/button_clear_color"
                         android:fontFamily="@style/RobotoFontCondensedLight"
-                        android:onClick="pointButton"
-                        android:text="@string/point"
-                        android:textColor="?attr/text_color"
-                        android:textSize="20sp" />
-
-                    <Button
-                        android:id="@+id/addButton"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="5dp"
-                        android:layout_marginVertical="7dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="?attr/button_symbol_color"
-                        android:fontFamily="@style/RobotoFontCondensedLight"
-                        android:onClick="addButton"
-                        android:text="@string/add"
+                        android:onClick="clearButton"
+                        android:text="@string/clear"
                         android:textColor="?attr/text_color"
                         android:textSize="20sp" />
 
@@ -478,20 +449,27 @@
                         android:textSize="20sp" />
 
                     <Button
-                        android:id="@+id/equalsButton"
+                        android:id="@+id/addButton"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="5dp"
                         android:layout_marginVertical="7dp"
-                        android:layout_weight="1"
+                        android:layout_weight="2"
                         android:background="@drawable/circle"
-                        android:backgroundTint="?attr/button_equals_color"
+                        android:backgroundTint="?attr/button_symbol_color"
                         android:fontFamily="@style/RobotoFontCondensedLight"
-                        android:onClick="equalsButton"
-                        android:text="@string/equals"
+                        android:onClick="addButton"
+                        android:text="@string/add"
                         android:textColor="?attr/text_color"
                         android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
 
                     <ImageButton
                         android:id="@+id/backspaceButton"
@@ -505,7 +483,38 @@
                         android:contentDescription="@string/backspace"
                         android:fontFamily="@style/RobotoFontCondensedLight"
                         android:onClick="backspaceButton"
-                        app:srcCompat="@drawable/backspace" />
+                        app:srcCompat="@drawable/ic_baseline_backspace_24" />
+
+                    <Button
+                        android:id="@+id/pointButton"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/circle"
+                        android:fontFamily="@style/RobotoFontCondensedLight"
+                        android:onClick="pointButton"
+                        android:text="@string/point"
+                        android:textColor="?attr/text_color"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/equalsButton"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="7dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="?attr/button_equals_color"
+                        android:fontFamily="@style/RobotoFontCondensedLight"
+                        android:onClick="equalsButton"
+                        android:text="@string/equals"
+                        android:textColor="?attr/text_color"
+                        android:textSize="20sp" />
                 </TableRow>
 
             </TableLayout>
@@ -555,14 +564,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.29" />
 
     <!--<View
         android:id="@+id/separator"

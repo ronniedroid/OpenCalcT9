@@ -58,4 +58,5 @@
 
     <!-- Others -->
     <string name="value_copied">Copied</string>
+    <string name="v0_0_0">v0.0.0</string>
 </resources>

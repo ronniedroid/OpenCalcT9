@@ -9,7 +9,6 @@ class MyPreferences(context: Context) {
     // https://proandroiddev.com/dark-mode-on-android-app-with-kotlin-dc759fc5f0e1
     companion object {
         private const val DARK_STATUS = "ronniedroid.opencalculatort9.DARK_STATUS"
-        private const val KEY_VIBRATION_STATUS = "ronniedroid.opencalculatort9.KEY_VIBRATION_STATUS"
         private const val KEY_HISTORY = "ronniedroid.opencalculatort9.HISTORY"
     }
 
@@ -17,8 +16,6 @@ class MyPreferences(context: Context) {
 
     var darkMode = preferences.getInt(DARK_STATUS, -1)
         set(value) = preferences.edit().putInt(DARK_STATUS, value).apply()
-    var vibrationMode = preferences.getBoolean(KEY_VIBRATION_STATUS, true)
-        set(value) = preferences.edit().putBoolean(KEY_VIBRATION_STATUS, value).apply()
     private var history = preferences.getString(KEY_HISTORY, null)
         set(value) = preferences.edit().putString(KEY_HISTORY, value).apply()
 
