@@ -1,5 +1,5 @@
 New:
 
 - Updated layout
-- Removed Vibration option.
-- Code Cleanup
+- Removed vibration option.
+- Code cleanup
